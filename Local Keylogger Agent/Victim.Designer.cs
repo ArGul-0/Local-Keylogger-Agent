@@ -1,6 +1,6 @@
 ﻿namespace Local_Keylogger_Agent
 {
-    partial class Form1
+    partial class Victim
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            SuspendLayout();
+            // 
+            // Victim
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(65, 65, 65);
+            ClientSize = new Size(484, 461);
+            Name = "Victim";
+            Opacity = 0D;
+            ShowInTaskbar = false;
+            ResumeLayout(false);
         }
 
         #endregion
