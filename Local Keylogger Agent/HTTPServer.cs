@@ -14,11 +14,19 @@ namespace Local_Keylogger_Agent
 
             Task.Run(async () =>
             {
-                while (true)
+                while (httpListener.IsListening)
                 {
-
+                    HttpListenerContext httpListenerContext = await httpListener.GetContextAsync();
                 }
             });
+        }
+        private void HandleRequest(HttpListenerContext context)
+        {
+            // Handle the incoming request here
+            HttpListenerRequest request = context.Request;
+            HttpListenerResponse response = context.Response;
+
+
         }
     }
 }
