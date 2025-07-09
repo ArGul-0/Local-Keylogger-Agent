@@ -17,6 +17,7 @@ namespace Local_Keylogger_Agent
                 while (httpListener.IsListening)
                 {
                     HttpListenerContext httpListenerContext = await httpListener.GetContextAsync();
+                    HandleRequest(httpListenerContext);
                 }
             });
         }
