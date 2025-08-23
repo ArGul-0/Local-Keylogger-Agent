@@ -45,6 +45,9 @@ namespace Local_Keylogger_Agent
 
             Process process = Process.Start(psi);
             process?.WaitForExit();
+
+            //Process.Start(exeFilePath);
+            //Application.Exit();
         }
     }
 }
