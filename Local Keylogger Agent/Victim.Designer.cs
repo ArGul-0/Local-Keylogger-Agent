@@ -36,6 +36,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(65, 65, 65);
             ClientSize = new Size(484, 461);
+            ControlBox = false;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Victim";
             Opacity = 0D;
             ShowInTaskbar = false;
