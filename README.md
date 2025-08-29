@@ -4,4 +4,6 @@
 
 **Brief instructions for use:**
 
-1. 
+**1.** Run the Local Keylogger Agent on the victim's machine (accept the request for administrator rights, this is mandatory).
+
+**2.** 
