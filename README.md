@@ -7,3 +7,7 @@
 **1.** Run the Local Keylogger Agent on the victim's machine (accept the request for administrator rights, this is mandatory).
 
 **2.** 
+
+Video Example of Malware Usage:
+https://github.com/user-attachments/assets/586421e0-4238-4f56-9cde-d0ebbe4c8ec2
+
