@@ -25,6 +25,8 @@
 
 **•** It is sewn into the system, adds itself to the hidden autorun and creates its own copy, so that you can even delete the original one after the 1st launch.the exe file.
 
+**•** It is very simple and intuitive to use.
+
 **Cons, unfortunately, it doesn't happen without them:**
 
 **•** Remote log pulling only works while on the same local network with infected devices.
