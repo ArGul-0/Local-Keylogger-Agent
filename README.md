@@ -33,7 +33,7 @@ Video Example of Malware Usage:
 
 https://github.com/user-attachments/assets/a02e68be-0698-4c10-8166-d0d2fd0ac45a
 
-The project is distributed under the **MIT license** — see the LICENSE.md file.
+The project is distributed under the **MIT license** — see the [LICENSE.md](https://github.com/ArGul-0/Local-Keylogger-Agent/blob/master/LICENSE.md) file.
 <details>
 <summary><strong>⚠️ IMPORTANT — Responsible Use & Liability Notice</strong></summary>
 
