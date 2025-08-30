@@ -7,7 +7,7 @@
 
 **2.** That's it, the target PC is now infected, you can delete the Agent's original .exe file if you want to.
 
-**3.** 
+**3.** You can run the [Controller](https://github.com/ArGul-0/Local-Keylogger-Controller) (located in a separate repository) - *https://github.com/ArGul-0/Local-Keylogger-Controller*, to remotely pull logs from all infected PCs on the local network to your device. The result will be saved to the Documents folder for your use.
 
 
 
